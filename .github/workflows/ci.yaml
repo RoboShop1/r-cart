@@ -5,4 +5,4 @@ jobs:
   CI-job:
     uses: RoboShop1/github-reusable/.github/workflows/ci.yaml@main
     with:
-    component_name: "cart"
+      component_name: "cart"
