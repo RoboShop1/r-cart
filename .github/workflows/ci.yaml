@@ -1,0 +1,7 @@
+name: Building-${{ github.repository }}
+on:
+  workflow_dispatch
+jobs:
+  uses: RoboShop1/github-reusable/.github/workflows/ci.yaml
+  with:
+    component_name: "cart"
