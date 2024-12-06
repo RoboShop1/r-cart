@@ -7,3 +7,5 @@ jobs:
     with:
       component_name: "cart"
       docker_build: yes
+    secrets:
+      token: "This is token"
