@@ -1,4 +1,4 @@
-name: Building ${{ github.repository }}
+name: contionuos integration
 on:
   workflow_dispatch
 jobs:
