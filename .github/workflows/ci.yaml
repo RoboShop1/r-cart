@@ -1,4 +1,4 @@
-name: Building-${{ github.repository }}
+name: Building ${{ github.repository }}
 on:
   workflow_dispatch
 jobs:
