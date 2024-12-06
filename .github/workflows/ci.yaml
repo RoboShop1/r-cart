@@ -1,10 +1,9 @@
 name: contionuos integration
-on:
-  workflow_dispatch
+on: [workflow_dispatch]
 jobs:
-  CI-job:
-    uses: RoboShop1/github-reusable/.github/workflows/ci.yaml@main
+  docker:
+    uses: RoboShop1/github-reusable/.github/workflows/docker-ci.yaml@main
     with:
-      component_name: "cart"
-    secrets:
-      token: "This is token"
+      image_name: ${{ github.repository }}
+    secrets: inherit
+
