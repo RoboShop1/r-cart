@@ -6,3 +6,4 @@ jobs:
     uses: RoboShop1/github-reusable/.github/workflows/ci.yaml@main
     with:
       component_name: "cart"
+      docker_build: "sample"
