@@ -14,6 +14,8 @@ jobs:
           echo "Trigger from api - ${{ inputs.name }}"
           echo "event name ${GITHUB_EVENT_NAME}"
           echo "event name $GITHUB_SHA"
+          
+          exit 1
 
       - name: print
         run: |
