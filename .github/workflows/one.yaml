@@ -10,7 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
-        run: printenv
+        run: |
+          echo "sample is ${{ github.event.head_commit.message }}"
+          echo "In env ${GITHUB_EVENT_HEAD_COMMIT_MESSAGE}"
+        
 
       - name: ok
         run: |
