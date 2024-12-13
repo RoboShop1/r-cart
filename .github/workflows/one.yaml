@@ -14,4 +14,4 @@ jobs:
           echo "Trigger from api - ${{ inputs.name }}"
       - name: print
         run: |
-          echo "${{ toJSON(github) }}"
+          echo "${{ toJSON(.github) }}"
