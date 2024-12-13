@@ -12,6 +12,9 @@ jobs:
       - name: sample echo
         run: |
           echo "Trigger from api - ${{ inputs.name }}"
+          echo "event name $GITHUB.EVENT_NAME"
+          echo "event name $GITHUB.SHA"
+
       - name: print
         run: |
           echo "${{ toJSON(.github) }}"
