@@ -15,5 +15,5 @@ jobs:
         run: |
           echo "This is ${GITHUB_EVENT_WORKFLOW_RUN_CONCLUSION}"
           echo "same  ${GITHUB_EVENT_NAME}"
-          echo "RUN ${GITHUB_RUN_NUMBER}
+          echo "RUN ${GITHUB_RUN_NUMBER}"
           
