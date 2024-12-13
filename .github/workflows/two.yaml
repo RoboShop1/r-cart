@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: print
         run: |
-          echo "This is ${GITHUB_EVENT_WORKFLOW_RUN_CONCLUSION}"
+          echo "This is ${GITHUB_EVENT_WORKFLOW_RUN.CONCLUSION}"
           echo "same  ${GITHUB_EVENT_NAME}"
-          echo "RUN ${GITHUB_RUN_NUMBER}
+          echo "RUN ${GITHUB_RUN_NUMBER}"
           
