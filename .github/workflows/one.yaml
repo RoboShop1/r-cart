@@ -1,6 +1,9 @@
 name: one workflow
 on:
   workflow_dispatch:
+    inputs:
+      name:
+        type: string
 
 jobs:
   one:
@@ -8,4 +11,4 @@ jobs:
     steps:
       - name: sample echo
         run: |
-          echo "Trigger from api"
+          echo "Trigger from api - ${{ inputs.name }}"
