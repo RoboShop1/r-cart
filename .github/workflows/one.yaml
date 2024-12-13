@@ -1,0 +1,11 @@
+name: one workflow
+on:
+  workflow_dispatch:
+
+jobs:
+  one:
+    runs-on: ubuntu-latest
+    steps:
+      - name: sample echo
+        run: |
+          echo "Trigger from api"
