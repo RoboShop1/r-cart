@@ -1,0 +1,16 @@
+name: two Workflow
+
+on:
+  workflow_run:
+    workflows: ["one workflow"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: print
+        run: |
+          echo ${{ toJSON(github) }}
