@@ -1,7 +1,7 @@
 name: Commit Comment Workflow
 
 on:
-  commit_comment:
+  push:
     branches:
       - main  # Optional: Specify the branches to listen for commit comments on
 
@@ -10,10 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v3
-
-      - name: Print commit comment details
-        run: |
-          echo "Comment author: ${{ github.actor }}"
-          echo "Comment body: ${{ github.event.comment.body }}"
-          echo "Commit SHA: ${{ github.event.comment.commit_id }}"
+        uses: printenv
