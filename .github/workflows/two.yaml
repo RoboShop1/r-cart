@@ -1,16 +1,17 @@
-#name: two Workflow
-#
-#on:
-#  workflow_run:
-#    workflows: ["one workflow"]
-#    types:
-#      - completed
-#
-#jobs:
-#  deploy:
-#    runs-on: ubuntu-latest
-#
-#    steps:
-#      - name: print
-#        run: |
-#          echo "${{ toJSON(github) }}"
+name: two Workflow
+
+on:
+  workflow_run:
+    workflows: ["one workflow"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: print
+        run: |
+          echo "This is ${GITHUB_EVENT_WORKFLOW_RUN_CONCLUSION}"
+          
