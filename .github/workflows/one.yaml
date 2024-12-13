@@ -17,4 +17,4 @@ jobs:
 
       - name: print
         run: |
-          echo "${{ toJSON(.github) }}"
+          echo "${{ toJSON(github) }}"
