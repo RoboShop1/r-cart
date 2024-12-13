@@ -11,3 +11,7 @@ jobs:
     steps:
       - name: Checkout the repository
         run: printenv
+
+      - name: ok
+        run: |
+          echo "${{ toJSON(github) }}"
