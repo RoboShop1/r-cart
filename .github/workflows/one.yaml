@@ -1,22 +1,19 @@
-name: one workflow
+name: Commit Comment Workflow
+
 on:
-  workflow_dispatch:
-    inputs:
-      name:
-        type: string
+  commit_comment:
+    branches:
+      - main  # Optional: Specify the branches to listen for commit comments on
 
 jobs:
-  one:
+  handle_comment:
     runs-on: ubuntu-latest
     steps:
-      - name: sample echo
-        run: |
-          echo "Trigger from api - ${{ inputs.name }}"
-          echo "event name ${GITHUB_EVENT_NAME}"
-          echo "event name $GITHUB_SHA"
-          
-          exit 1
+      - name: Checkout the repository
+        uses: actions/checkout@v3
 
-      - name: print
+      - name: Print commit comment details
         run: |
-          echo "${{ toJSON(github) }}"
+          echo "Comment author: ${{ github.actor }}"
+          echo "Comment body: ${{ github.event.comment.body }}"
+          echo "Commit SHA: ${{ github.event.comment.commit_id }}"
