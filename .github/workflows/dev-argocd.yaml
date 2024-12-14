@@ -1,4 +1,4 @@
-name: dev-catalogue-deploy
+name: dev-cart-deploy
 on:
   workflow_dispatch:
 jobs:
